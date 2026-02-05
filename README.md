@@ -14,9 +14,9 @@ Tampermonkey 油猴脚本，自动下载平安银行电子回单、月结单、�
 
 | 简称 | 公司名称 | 账号 | 快捷键 |
 |------|----------|------|--------|
-| wj | 深圳市福田区赛格电子市场网聚商行 | 11006712353201 | W |
-| bf | 爆发科技有限公司 | 15675102120011 | B |
-| hff | 昊峰坊(深圳)贸易有限公司 | 11014705692006 | H |
+| jd | 京东 | 888888888 | j |
+|  |  |  | B |
+|  |  |  | H |
 
 > 公司配置在代码开头 `COMPANIES` 对象中，添加新公司后快捷键自动生成（取首字母大写）。
 
@@ -59,7 +59,7 @@ Tampermonkey 油猴脚本，自动下载平安银行电子回单、月结单、�
 
 ```
 ┌─────────────────────────────┐
-│ 公司: [网聚 ▾]             │
+│ 公司: [京东 ▾]             │
 │ ─────────────────────────  │
 │ [回单] [月结单] [明细]     │
 │ 年份: [2025 ▾]             │
@@ -68,8 +68,8 @@ Tampermonkey 油猴脚本，自动下载平安银行电子回单、月结单、�
 │                             │
 │ F1-回单 F2-月结单 F3-明细   │
 │ 1-9,0-月份 Q+1~4-季度       │
-│ A-全选 C-清空 W-网聚        │
-│ B-爆发 H-昊峰坊             │
+│ A-全选 C-清空 J-京东        │
+│ T-腾讯 B-比亚迪             │
 │ [   开始下载 (Enter)   ]    │
 └─────────────────────────────┘
 ```
@@ -80,10 +80,10 @@ Tampermonkey 油猴脚本，自动下载平安银行电子回单、月结单、�
 
 ```
 下载目录/
-├── 2025_01_dzhd_wj_1.pdf     # 回单
-├── 2025_01_yjd_wj.pdf        # 月结单
-├── 2025_Q1_jymx_wj.xlsx      # 交易明细（季度）
-└── 2025_03_jymx_wj.xlsx      # 交易明细（单月）
+├── 2025_01_dzhd_jd_1.pdf     # 回单
+├── 2025_01_yjd_jd.pdf        # 月结单
+├── 2025_Q1_jymx_jd.xlsx      # 交易明细（季度）
+└── 2025_03_jymx_jd.xlsx      # 交易明细（单月）
 ```
 
 ## 技术栈
@@ -97,9 +97,9 @@ Tampermonkey 油猴脚本，自动下载平安银行电子回单、月结单、�
 
 ```javascript
 const COMPANIES = {
-    'wj':  { name: '网聚',     accountNo: 'xxx', accountName: '...', accountBankName: '' },
-    'bf':  { name: '爆发',     accountNo: 'xxx', accountName: '...', accountBankName: '' },
-    'hff': { name: '昊峰坊',   accountNo: 'xxx', accountName: '...', accountBankName: '' },
+    'tsl':  { name: 'tesla',     accountNo: 'xxx', accountName: '...', accountBankName: '' },
+    'zzx':  { name: '猪猪侠',     accountNo: 'xxx', accountName: '...', accountBankName: '' },
+    'txdy': { name: '天下第一',   accountNo: 'xxx', accountName: '...', accountBankName: '' },
     'new': { name: '新公司',   accountNo: 'xxx', accountName: '...', accountBankName: '' }  // 快捷键自动为 N
 };
 ```
